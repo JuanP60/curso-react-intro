@@ -1,0 +1,12 @@
+.subParent .subTitle{
+    display: flex;
+    justify-content: center;  
+}
+
+.subTitle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #d9d9d9;
+    text-align: center;
+}

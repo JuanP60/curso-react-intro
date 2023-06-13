@@ -1,0 +1,46 @@
+.listItems{
+    background-color: #fafafa;
+    display: flex;
+    margin-left: 25%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    border-radius: 20px;
+    width: 50%;
+    -webkit-box-shadow: 17px 14px 4px -5px rgba(3,65,71,0.7);
+    -moz-box-shadow: 17px 14px 4px -5px rgba(3,65,71,0.7);
+    box-shadow: 17px 14px 4px -5px rgba(3,65,71,0.7);
+}
+
+
+
+.TodoItem-p{
+    width: calc(100% - 120px );
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.TodoItem-p--complete{
+    text-decoration:line-through
+}
+
+.checkBox{
+    color: rgb(93,224,230);
+    cursor: pointer;
+    padding-right: 5%;
+}
+
+.Icon-check--active{
+    color: greenyellow;
+}
+
+.deleteBox{
+    color: rgb(93,224,230);   
+    cursor: pointer; 
+}
+
+.Icon-delete--active{
+    color: red;
+}

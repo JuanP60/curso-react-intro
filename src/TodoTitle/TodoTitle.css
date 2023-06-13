@@ -1,0 +1,12 @@
+.headerParent .headerChild{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    font-family: 'Ruda', sans-serif;
+    color: white;
+    font-size: 56px;
+    padding-top: 20px;
+}
