@@ -1,12 +1,18 @@
+import { TodoContext } from '../TodoContext';
 import './TodoSearch.css';
 import React from 'react';
 
 // importamos react ya que vamos a utilizar una herramienta que se llama
 // useState -MANEJO DE ESTADOS
 
-function TodoSearch({
-    searchValue, setSearchValue
-}) {
+function TodoSearch() {
+
+    // pasamos las props que necesita el componente con el hooks useContext
+
+    const {
+        searchValue,
+        setSearchValue
+      } = React.useContext(TodoContext);
 
     // lo guardamos en un array, ya que el estado no solamente
     // se consume, si no que también se actualiza

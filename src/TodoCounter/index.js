@@ -1,6 +1,8 @@
+import React from 'react';
 import './TodoCounter.css';
+import { TodoContext } from '../TodoContext';
 
-function TodoCounter({ total, completed }) {
+function TodoCounter() {
   // las props laspodemos llamar aca con las propiedades que tengan
   // props.children, props.cars, etc
   // o tambien podemos poner el nombre de la propiedades directamente
@@ -17,10 +19,24 @@ function TodoCounter({ total, completed }) {
 
   // la otra forma es simplemente con archivos css
 
+  //-----------------------------------------
+
+  // vamos a recibir las propiedades de una manera diferente:
+  // debemos enviarle el contexto que queremos utilizar, en este caso el
+  // contexto de los TODOs, es mi critterio cuantos contextos creo
+  // lo guardamos en una variable y recibimos informacion en forma de objeto {}
+  // la ventaja es que en el componente donde necesitabamos la info
+  // la llamamos con useContext
+
+  const {
+    completedTodos,
+    totalTodos
+  } = React.useContext(TodoContext);
+
     return (
       <div className='subParent'>
         <h2 className='subTitle'>
-        You've done {completed} from {total} TODOS 
+        You've done {completedTodos} from {totalTodos} TODOS 
         </h2>
       </div>
     );
