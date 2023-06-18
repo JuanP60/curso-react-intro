@@ -79,6 +79,17 @@ function TodoProvider ({ children }) {
             }
         );
 
+        // creamos nuestro addTodo:
+
+        const addTodo = (text) => {
+            const newTodos = [...todos];
+            newTodos.push({
+                text,
+                completed: false
+            });
+            saveTodos(newTodos);
+        };
+
         // creamos función actualizadora del estado de todos (completar todos)
 
         const completeTodo = (text) => {
@@ -125,7 +136,8 @@ function TodoProvider ({ children }) {
             completeTodo,
             deleteTodo,
             openModal,
-            setOpenModal
+            setOpenModal,
+            addTodo
         }}>
             {/* Ahora cualquier componente que tengamos aca adentro
             va poder accerder a cualquier elemento del objeto anterior

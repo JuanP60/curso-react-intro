@@ -17,6 +17,10 @@ import React from 'react';
 
 import { Modal } from '../Modal';
 
+// importamos el componente para el formulario
+
+import { TodoForm } from '../TodoForm';
+
 // con .. hacemos que busque los archivos una carpeta antes
 // importamos nuestro custom hook 
 
@@ -104,7 +108,7 @@ function AppUI() {
       el mensaje*/}
       {openModal && (
         <Modal>
-          La funcionalidad de agregar TODOs
+          <TodoForm />
         </Modal>
       )}
 
